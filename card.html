@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Style</title>
+  <style>
+    .service-card {
+      padding: 40px;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0px 10px 30px rgba(8, 14, 28, 0.06);
+      background-color: var(--white-color);
+      border-radius: 10px;
+      overflow: hidden;
+      -webkit-transition: 0.4s ease-in-out;
+      transition: 0.4s ease-in-out;
+    }
+
+    .service-card:hover:before,
+    .service-card:hover:after {
+      opacity: 1;
+      height: 120%;
+      width: 120%;
+      border-radius: 0;
+    }
+
+    .service-card:before,
+    .service-card:after {
+      content: '';
+      position: absolute;
+      height: 110px;
+      width: 110px;
+      background-color: #aeacb6;
+      opacity: 0.6;
+      border-radius: 50%;
+      -webkit-transition: 0.4s ease-in-out;
+      transition: 0.4s ease-in-out;
+      z-index: -1;
+    }
+
+    .service-card:before {
+      bottom: -73px;
+      right: -28px;
+    }
+
+    .service-card:hover {
+      width: 100%;
+    }
+
+
+    .service-card_number {
+      position: absolute;
+      top: 25px;
+      right: 40px;
+      font-size: 100px;
+      line-height: 1;
+      font-weight: bold;
+      color: var(--smoke-color2);
+      opacity: 0.3;
+    }
+
+    .shape-icon {
+      position: relative;
+      z-index: 2;
+      width: 90px;
+      height: 85px;
+      line-height: 85px;
+      text-align: center;
+    }
+
+    .shape-icon:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: var(--smoke-color2);
+      -webkit-clip-path: path("M4.76563 19.2144C-2.32686 32.07 -1.20075 48.6639 6.14105 61.3767C16.4024 79.1459 38.9816 89.016 58.6174 83.4451C78.2532 77.8741 92.5688 56.7417 89.6127 36.3982C84.2306 -0.647078 23.3991 -14.559 4.76563 19.2144Z");
+      clip-path: path("M4.76563 19.2144C-2.32686 32.07 -1.20075 48.6639 6.14105 61.3767C16.4024 79.1459 38.9816 89.016 58.6174 83.4451C78.2532 77.8741 92.5688 56.7417 89.6127 36.3982C84.2306 -0.647078 23.3991 -14.559 4.76563 19.2144Z");
+      z-index: -1;
+      -webkit-transition: 0.4s ease-in-out;
+      transition: 0.4s ease-in-out;
+    }
+
+    .service-card .shape-icon {
+      margin-bottom: 30px;
+    }
+
+    .service-card:hover .shape-icon:before {
+      background-color: var(--white-color);
+    }
+
+    .shape-icon .dots:before {
+      top: 0;
+      right: 9px;
+    }
+
+    .shape-icon .dots:before,
+    .shape-icon .dots:after {
+      content: '';
+      position: absolute;
+      background-color: var(--theme-color);
+      height: 24px;
+      width: 23px;
+      border-radius: 50%;
+    }
+
+    .shape-icon .dots:after {
+      height: 12px;
+      width: 11px;
+      bottom: 0;
+      left: 27px;
+    }
+
+    .box-title {
+      font-size: 24px;
+      line-height: 1.417;
+      font-weight: 700;
+      margin-top: -0.32em;
+    }
+
+    .service-card:hover .box-title {
+      color: var(--white-color);
+    }
+
+    .service-card:hover .box-title {
+      color: var(--white-color);
+    }
+
+    .service-card:hover .service-card_text {
+      color: var(--white-color);
+    }
+
+    .service-card_text {
+      -webkit-transition: 0.4s ease-in-out;
+      transition: 0.4s ease-in-out;
+      margin-bottom: 22px;
+    }
+
+    .service-card:hover .th-btn {
+      background-color: var(--white-color);
+    }
+
+    .service-card .th-btn {
+      background-color: var(--smoke-color2);
+      color: var(--title-color);
+      padding: 12.5px 20px;
+      box-shadow: none;
+    }
+
+    .elementor-box {
+      width: 30%;
+      height: 300px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="service-card elementor-box">
+    <div class="service-card_number">01</div>
+    <div class="shape-icon">
+      <img decoding="async" src="https://themeholy.com/wordpress/fresh/wp-content/uploads/2024/01/service_card_1.svg"
+        alt="Webteck"> <span class="dots"></span>
+    </div>
+    <h3 class="box-title"><a href="https://wordpress.themeholy.com/webteck/service-details/">Web Development</a></h3>
+    <p class="service-card_text">Intrinsicly redefine competitive e-business before adaptive potentialiti.
+      Professionally
+      build progressive users with.</p>
+    <a href="https://wordpress.themeholy.com/webteck/service-details/" class="th-btn">Read More<i
+        class="fa-regular fa-arrow-right ms-2"></i></a>
+    <div class="bg-shape">
+      <img decoding="async" src="https://themeholy.com/wordpress/fresh/wp-content/uploads/2024/01/service_card_bg.png"
+        alt="Webteck">
+    </div>
+  </div>
+</body>
+
+</html>
